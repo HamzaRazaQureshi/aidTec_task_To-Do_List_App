@@ -25,10 +25,6 @@ class ToDoListApp:
         self.tasks_listbox = tk.Listbox(root, width=40, font=('Arial 12'))
         self.tasks_listbox.pack(pady=5)
 
-        self.scrollbar = tk.Scrollbar(root, command=self.tasks_listbox.yview)
-        self.scrollbar.pack(side='right', fill='y')
-        self.tasks_listbox.config(yscrollcommand=self.scrollbar.set)
-
         self.add_button = tk.Button(root, bg="lightblue", width=40, font=('Arial 12'), text="Add Task", command=self.add_task)
         self.add_button.pack(pady=5)
 
